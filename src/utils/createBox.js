@@ -8,7 +8,10 @@ import getMatrix, {
 } from "./matrix";
 
 function getValue() {
-  return Math.random() > 0.75 ? 4 : 2;
+  let num = Math.random();
+  let t_num = document.getElementById('score')
+  if( num > 0.75) {t_num.innerHTML = Number(t_num.textContent) + 4} else { t_num.innerHTML = Number(t_num.textContent) + 2 }
+  return num > 0.75 ? 4 : 2;
 }
 
 function getBoxPosition() {
